@@ -1,15 +1,6 @@
 public class Temperature{
 	private double wartosc;
 	private char skala;
-	private int cos;
-	
-	public int getCos() {
-		return cos;
-	}
-
-	public void setCos(int cos) {
-		this.cos = cos;
-	}
 
 	public Temperature(){
 		this.wartosc = 0;
