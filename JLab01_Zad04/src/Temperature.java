@@ -1,76 +1,76 @@
 public class Temperature{
 	
-	private double wartosc;
-	private char skala;
+	private double value;
+	private char scale;
 
 	public Temperature(){
-		this.wartosc = 0;
-		this.skala = 'C';
+		this.value = 0;
+		this.scale = 'C';
 	}
 	
-	public Temperature(double Wartosc){
-		this.wartosc = Wartosc;
-		this.skala = 'C';
+	public Temperature(double Value){
+		this.value = Value;
+		this.scale = 'C';
 	}
 	
-	public Temperature(char Skala){
-		this.wartosc = 0;
-		this.skala = Skala;
+	public Temperature(char Scale){
+		this.value = 0;
+		this.scale = Scale;
 	}
 	
-	public Temperature(double Wartosc, char Skala){
-		this.wartosc = Wartosc;
-		this.skala = Skala;
+	public Temperature(double Value, char Scale){
+		this.value = Value;
+		this.scale = Scale;
 	}
 	
-	public double getWartosc(){
-		return this.wartosc;
+	public double getValue(){
+		return this.value;
 	}
 	
-	public char getSkala(){
-		return this.skala;
+	public char getScale(){
+		return this.scale;
 	}
 	
-	public void setWartosc(double Wartosc){
-		this.wartosc = Wartosc;
+	public void setValue(double Value){
+		this.value = Value;
 	}
 	
-	public void setSkala(char Skala){
-		this.skala = Skala;
+	public void setScale(char Scale){
+		this.scale = Scale;
 	}
 	
-	public void setTemperatura(double Wartosc, char Skala){
-		this.wartosc = Wartosc;
-		this.skala = Skala;
+	public void setTemperature(double Value, char Scale){
+		this.value = Value;
+		this.scale = Scale;
 	}
 	
 	public double getCelsius(){
-		if (this.skala == 'C')
-		{ return this.wartosc;}
+		if (this.scale == 'C')
+		{ return this.value;}
 		else 
-		{ return 5 * (this.wartosc - 32) / 9; }
+		{ return 5 * (this.value - 32) / 9; }
 	}
 	
 	public double getFahrenheit(){
-		if (this.skala == 'F')
-		{ return this.wartosc;}
+		if (this.scale == 'F')
+		{ return this.value;}
 		else 
-		{ return 9 * (this.wartosc/5) + 32; }
+		{ return 9 * (this.value/5) + 32; }
 	}
 	
-	public int porownaj(Temperature Temperatura1){
-		double roznica = this.getCelsius() - Temperatura1.getCelsius();
+	public int compare(Temperature Temperatura){
+		double diff = this.getCelsius() - Temperatura.getCelsius();
 		
-		if (roznica > 0.0){
+		if (diff > 0.0){
 			return 1;
-		}else if (roznica < 0.0){
+		}else if (diff < 0.0){
 			return -1;
 		}
 		
 		return 0;
 	}
 	
-	public void drukuj(){
-		System.out.println("Temperatura: " + this.wartosc + this.skala);
+	public void print(){
+		System.out.println("Temperatura: " + this.value + this.scale);
 	}
 }

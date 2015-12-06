@@ -2,17 +2,17 @@ public class Zadanie04 {
 
 	public static void main(String[] args) {
 		
-		Driver drv;
+		Driver driver;
 		
 		if (args.length == 2){
-			drv = new Driver(args);
+			driver = new Driver(args);
 		}
 		else
 		{
-			drv = new Driver();
+			driver = new Driver();
 		}
 
-		drv.porownaj(true);
+		driver.compare(true);
 	}
 
 }
