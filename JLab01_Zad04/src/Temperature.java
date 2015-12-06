@@ -1,4 +1,5 @@
 public class Temperature{
+	
 	private double wartosc;
 	private char skala;
 
@@ -57,8 +58,8 @@ public class Temperature{
 		{ return 9 * (this.wartosc/5) + 32; }
 	}
 	
-	public int porownaj(Temperature Temperatura1, Temperature Temperatura2){
-		double roznica = Temperatura1.getCelsius() - Temperatura2.getCelsius();
+	public int porownaj(Temperature Temperatura1){
+		double roznica = this.getCelsius() - Temperatura1.getCelsius();
 		
 		if (roznica > 0.0){
 			return 1;

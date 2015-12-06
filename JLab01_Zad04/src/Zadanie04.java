@@ -12,7 +12,7 @@ public class Zadanie04 {
 			drv = new Driver();
 		}
 
-		drv.porownaj();
+		drv.porownaj(true);
 	}
 
 }
