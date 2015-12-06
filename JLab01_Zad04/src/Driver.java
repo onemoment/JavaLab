@@ -12,23 +12,6 @@ public class Driver{
 		this.temp4 = new Temperature(12.5, 'F');
 	}
 	
-	public void noArgs(){
-		temp1.print();
-		temp2.print();
-		temp3.print();
-		temp4.print();
-	}
-	
-	public void withArgs(String[] arguments){
-		if (arguments.length == 2){
-			this.temp1 = this.getObject(arguments[0]);
-			this.temp2 = this.getObject(arguments[1]);
-			
-			//this.temp1.print();
-			//this.temp2.print();
-		}
-	}
-	
 	private Temperature getObject(String Word){
 		String str = Word;
 		str.trim();
@@ -48,7 +31,24 @@ public class Driver{
 		}
 		return temp;
 	}
-
+	
+	public void noArgs(){
+		temp1.print();
+		temp2.print();
+		temp3.print();
+		temp4.print();
+	}
+	
+	public void withArgs(String[] arguments){
+		if (arguments.length == 2){
+			this.temp1 = this.getObject(arguments[0]);
+			this.temp2 = this.getObject(arguments[1]);
+			
+			//this.temp1.print();
+			//this.temp2.print();
+		}
+	}
+	
 	public int compare(boolean Print){
 		int result = this.temp1.compare(this.temp2);
 		if (Print) System.out.println(result);

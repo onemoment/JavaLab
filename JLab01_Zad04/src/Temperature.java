@@ -1,8 +1,10 @@
 public class Temperature{
 	
+	// pola prywatne
 	private double value;
 	private char scale;
 
+	// konstruktory
 	public Temperature(){
 		this.value = 0;
 		this.scale = 'C';
@@ -23,6 +25,7 @@ public class Temperature{
 		this.scale = Scale;
 	}
 	
+	// gettery
 	public double getValue(){
 		return this.value;
 	}
@@ -30,20 +33,7 @@ public class Temperature{
 	public char getScale(){
 		return this.scale;
 	}
-	
-	public void setValue(double Value){
-		this.value = Value;
-	}
-	
-	public void setScale(char Scale){
-		this.scale = Scale;
-	}
-	
-	public void setTemperature(double Value, char Scale){
-		this.value = Value;
-		this.scale = Scale;
-	}
-	
+
 	public double getCelsius(){
 		if (this.scale == 'C')
 		{ return this.value;}
@@ -58,6 +48,21 @@ public class Temperature{
 		{ return 9 * (this.value/5) + 32; }
 	}
 	
+	// settery
+	public void setValue(double Value){
+		this.value = Value;
+	}
+	
+	public void setScale(char Scale){
+		this.scale = Scale;
+	}
+	
+	public void setTemperature(double Value, char Scale){
+		this.value = Value;
+		this.scale = Scale;
+	}
+	
+	// metody publiczne
 	public int compare(Temperature Temperatura){
 		double diff = this.getCelsius() - Temperatura.getCelsius();
 		
