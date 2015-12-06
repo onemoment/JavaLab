@@ -1,24 +1,31 @@
 public class Driver{
 	
-	private Temperature temp1 = new Temperature();
-	private Temperature temp2 = new Temperature(23.5);
-	private Temperature temp3 = new Temperature('F');
-	private Temperature temp4 = new Temperature(12.5, 'F');
+	private Temperature temp1;
+	private Temperature temp2;
+	private Temperature temp3;
+	private Temperature temp4;
 	
 	public Driver(){
+		this.temp1 = new Temperature();
+		this.temp2 = new Temperature(23.5);
+		this.temp3 = new Temperature('F');
+		this.temp4 = new Temperature(12.5, 'F');
+	}
+	
+	public void noArgs(){
 		temp1.print();
 		temp2.print();
 		temp3.print();
 		temp4.print();
 	}
 	
-	public Driver(String[] arguments){
+	public void withArgs(String[] arguments){
 		if (arguments.length == 2){
 			this.temp1 = this.getObject(arguments[0]);
 			this.temp2 = this.getObject(arguments[1]);
 			
-			this.temp1.print();
-			this.temp2.print();
+			//this.temp1.print();
+			//this.temp2.print();
 		}
 	}
 	
