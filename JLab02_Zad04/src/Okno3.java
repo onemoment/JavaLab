@@ -28,14 +28,14 @@ public class Okno3 extends Frame implements WindowListener, ActionListener, Item
 	private void createCheckBox(){
 		check = new Checkbox("Pola aktywne");
 		check.addItemListener(this);
-		check.setBounds(10, 40, 300, 20);
+		check.setBounds(20, 40, 300, 20);
 		check.setState(false);
-		add(check);//, BorderLayout.PAGE_START);
+		add(check);
 	}
 	
 	private void createTextField(){
 		text = new TextField("podaj nowy element");
-		text.setBounds(10, 90, 300, 20);
+		text.setBounds(20, 70, 300, 25);
 		text.setEnabled(false);
 		add(text);
 	}
@@ -43,20 +43,20 @@ public class Okno3 extends Frame implements WindowListener, ActionListener, Item
 	private void createButton(){
 		button = new Button("Dodaj element");
 		button.addActionListener(this);
-		button.setBounds(10, 140, 100, 25);
+		button.setBounds(20, 105, 100, 25);
 		button.setEnabled(false);
 		add(button);
 	}
 	
 	private void createList(){
 		list = new List();
-		list.setBounds(10, 190, 300, 300);
+		list.setBounds(20, 140, 300, 300);
 		list.setEnabled(false);
 		add(list);
 	}
 	private void createLabel(){
 		label = new Label("Wybierz, co chcesz zrobiæ?");
-		label.setBounds(10, 540, 200, 25);
+		label.setBounds(20, 450, 200, 25);
 		add(label);
 	}
 	
@@ -65,7 +65,7 @@ public class Okno3 extends Frame implements WindowListener, ActionListener, Item
 		choice.add("- brak akcji -");
 		choice.add("Wyczyœæ listê");
 		choice.add("Odwróæ kolejnoœæ");
-		choice.setBounds(10, 590, 200, 25);
+		choice.setBounds(20, 485, 300, 25);
 		choice.addItemListener(this);
 		choice.setEnabled(false);
 		add(choice);
@@ -73,7 +73,7 @@ public class Okno3 extends Frame implements WindowListener, ActionListener, Item
 	
 	private void createCloseButton(){
 		close = new Button("Zamknij");
-		close.setBounds(10, 640, 100, 25);
+		close.setBounds(20, 530, 100, 25);
 		close.addActionListener(this);
 		add(close);
 	}
@@ -81,8 +81,8 @@ public class Okno3 extends Frame implements WindowListener, ActionListener, Item
 	public Okno3() throws HeadlessException {
 		super();
 		this.addWindowListener(this);
-		setBounds(20, 20, 400, 700);
-		setLayout(null);//new BorderLayout());
+		setBounds(20, 20, 340, 600);
+		setLayout(null);
 		
 		createCheckBox();
 		createTextField();
