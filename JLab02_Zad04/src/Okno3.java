@@ -2,6 +2,7 @@ import java.awt.BorderLayout;
 import java.awt.Button;
 import java.awt.Checkbox;
 import java.awt.Choice;
+import java.awt.Color;
 import java.awt.Frame;
 import java.awt.HeadlessException;
 import java.awt.Label;
@@ -85,6 +86,7 @@ public class Okno3 extends Frame implements WindowListener, ActionListener, Item
 		super();
 		this.addWindowListener(this);
 		setBounds(20, 20, 340, 600);
+		setBackground(new Color(150,180,210));
 		setLayout(null);
 		
 		createCheckBox();
