@@ -17,6 +17,7 @@ import java.awt.event.WindowListener;
 
 public class Okno3 extends Frame implements WindowListener, ActionListener, ItemListener {
 
+	// komponenty
 	Checkbox check;
 	TextField text;
 	Button button;
@@ -25,6 +26,7 @@ public class Okno3 extends Frame implements WindowListener, ActionListener, Item
 	Choice choice;
 	Button close;
 	
+	// tworzenie komponentow
 	private void createCheckBox(){
 		check = new Checkbox("Pola aktywne");
 		check.addItemListener(this);
@@ -78,6 +80,7 @@ public class Okno3 extends Frame implements WindowListener, ActionListener, Item
 		add(close);
 	}
 	
+	// tworzenie okna
 	public Okno3() throws HeadlessException {
 		super();
 		this.addWindowListener(this);
@@ -93,10 +96,12 @@ public class Okno3 extends Frame implements WindowListener, ActionListener, Item
 		createCloseButton();
 	}
 	
+	// uruchamianie aplikacji
 	public void run(){
 		setVisible(true);
 	}
 
+	// akcje
 	private void zaznacz(boolean stan){
 		text.setEnabled(stan);
 		button.setEnabled(stan);
@@ -148,16 +153,10 @@ public class Okno3 extends Frame implements WindowListener, ActionListener, Item
 	}
 
 	@Override
-	public void windowActivated(WindowEvent e) {
-		// TODO Auto-generated method stub
-
-	}
+	public void windowActivated(WindowEvent e) {}
 
 	@Override
-	public void windowClosed(WindowEvent e) {
-		// TODO Auto-generated method stub
-
-	}
+	public void windowClosed(WindowEvent e) {}
 
 	@Override
 	public void windowClosing(WindowEvent e) {
@@ -165,28 +164,16 @@ public class Okno3 extends Frame implements WindowListener, ActionListener, Item
 	}
 
 	@Override
-	public void windowDeactivated(WindowEvent e) {
-		// TODO Auto-generated method stub
-
-	}
+	public void windowDeactivated(WindowEvent e) {}
 
 	@Override
-	public void windowDeiconified(WindowEvent e) {
-		// TODO Auto-generated method stub
-
-	}
+	public void windowDeiconified(WindowEvent e) {}
 
 	@Override
-	public void windowIconified(WindowEvent e) {
-		// TODO Auto-generated method stub
-
-	}
+	public void windowIconified(WindowEvent e) {}
 
 	@Override
-	public void windowOpened(WindowEvent e) {
-		// TODO Auto-generated method stub
-
-	}
+	public void windowOpened(WindowEvent e) {}
 	
 	@Override
 	public void itemStateChanged(ItemEvent e){
@@ -202,6 +189,7 @@ public class Okno3 extends Frame implements WindowListener, ActionListener, Item
 		}
 	}
 
+	// 
 	public static void main(String[] args) {
 		Okno3 okno = new Okno3();
 		okno.run();
