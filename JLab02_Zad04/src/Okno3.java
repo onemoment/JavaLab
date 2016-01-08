@@ -116,13 +116,25 @@ public class Okno3 extends Frame implements WindowListener, ActionListener, Item
 	
 	private void akcjaOdwroc(){
 		String item = "";
-		int last = list.getItemCount() -1; 
-		int center =  last / 2;
+		int last = list.getItemCount() -1;
+		int center;
 		
-		for (int i=0; i<center; i++){
-			item = list.getItem(last - i);
-			list.replaceItem(list.getItem(i), last - i);
-			list.replaceItem(item, i);
+		if (last > 0){
+			
+			if (last > 1){
+				center =  last / 2;
+			}else{
+				center = last;
+			}
+			
+			for (int i=0; i<center; i++){
+				item = list.getItem(last - i);
+				list.replaceItem(list.getItem(i), last - i);
+				list.replaceItem(item, i);
+			}
+			
+			choice.select(0);
+			list.requestFocus();
 		}
 	}
 	
